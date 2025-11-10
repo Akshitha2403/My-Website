@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARYA Pet Adoption Center</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* Header */
+    header {
+      background-color: #f39c12;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #f39c12;
+    }
+
+    /* Banner Section */
+    .banner {
+      background-image: url('https://cdn05.zipify.com/vVtqVqW20figbsgTd-9pYBpIYHo=/fit-in/3840x0/b6695c1957634c3fb8d576be00f4cb2b/pot013-blog-hero-horizontal-11.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    /* About Section */
+    section {
+      padding: 40px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    section p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Pet List Section */
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f39c12;
+      color: white;
+    }
+
+    /* Contact Form */
+    form {
+      width: 60%;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #e67e22;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🐾 ARYA Pet Adoption Center 🐾</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#pets">Available Pets</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="banner" id="home">
+    <p>Find Your New Best Friend!</p>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>ARYA Pet Adoption Center</strong>! We’re dedicated to helping adorable pets find loving homes.  
+      Every pet deserves care, comfort, and a family. Join us in spreading love and compassion by adopting, not shopping. 🐶🐱
+    </p>
+  </section>
+
+  <section id="pets">
+    <h2>Our Lovely Pets</h2>
+    <table>
+      <tr>
+        <th>Pet Name</th>
+        <th>Type</th>
+        <th>Age</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Bella</td>
+        <td>Dog</td>
+        <td>2 Years</td>
+        <td>Available</td>
+      </tr>
+      <tr>
+        <td>Whiskers</td>
+        <td>Cat</td>
+        <td>1 Year</td>
+        <td>Adopted</td>
+      </tr>
+      <tr>
+        <td>Buddy</td>
+        <td>Dog</td>
+        <td>3 Years</td>
+        <td>Available</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="showThankYouMessage(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 ARYA Pet Adoption Center | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showThankYouMessage(event) {
+      event.preventDefault(); // stops form from reloading the page
+      alert("Thank you! We will contact you soon.");
+      document.querySelector("form").reset(); // clears the form after submitting
+    }
+  </script>
+</body>
+</html>
